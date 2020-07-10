@@ -2,7 +2,19 @@ def intersection(arrays):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    ht = {}
+    result = []
+
+    # iterate through each sub list of integers 
+    for subArr in arrays:
+        for i in subArr:
+            # does not already exist, set occurrence to 1
+            if i not in ht:
+                ht[i] = 1
+            else:
+                ht[i] += 1
+                if ht[i] == len(arrays):
+                    result.append(i)
 
     return result
 
